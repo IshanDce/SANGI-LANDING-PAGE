@@ -20,6 +20,9 @@
   <!-- Favicon using official SANGI logo -->
   <link rel="icon" type="image/png" href="assets/images/logo.png">
 
+  <!-- Preload hero image (above the fold — loads first) -->
+  <link rel="preload" as="image" href="assets/images/hero_home_services.webp" type="image/webp">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/main.css">
@@ -195,7 +198,7 @@
           <!-- Hero Visual with AI Image & Dynamic Cards -->
           <div class="hero-visual">
             <div class="hero-main-img-card">
-              <img src="assets/images/hero_home_services.jpg" alt="SANGI Verified Professional Helping Happy Homeowner">
+              <img src="assets/images/hero_home_services.jpg" alt="SANGI Verified Professional Helping Happy Homeowner" loading="eager" decoding="async">
             </div>
 
             <!-- Floating Card Top -->
@@ -241,7 +244,7 @@
       <div class="container">
         <div class="download-highlight-card">
           <div class="download-card-visual">
-            <img src="assets/images/download_app_icon.jpg" alt="Download SANGI App">
+            <img src="assets/images/download_app_icon.jpg" alt="Download SANGI App" loading="lazy" decoding="async">
           </div>
           <div class="download-card-info">
             <span class="section-tag" style="margin-bottom: 12px;">Mobile Application</span>
@@ -1302,6 +1305,29 @@
   <!-- JavaScript Modules -->
   <script src="js/app.js"></script>
   <script src="js/modal.js"></script>
+
+  <!-- WebP Auto-Swap: serves .webp to all modern browsers, PNG/JPG to legacy -->
+  <script>
+    (function () {
+      // Feature-detect WebP support
+      var canvas = document.createElement('canvas');
+      canvas.width = canvas.height = 1;
+      var supportsWebP = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+      if (!supportsWebP) return; // legacy browser — keep originals
+
+      // Swap src for every <img> that has a .png or .jpg/.jpeg source
+      document.querySelectorAll('img[src]').forEach(function (img) {
+        var src = img.getAttribute('src');
+        if (/\.(png|jpe?g)$/i.test(src)) {
+          var webpSrc = src.replace(/\.(png|jpe?g)$/i, '.webp');
+          // Only swap if file actually exists (create a tiny probe)
+          var probe = new Image();
+          probe.onload = function () { img.src = webpSrc; };
+          probe.src = webpSrc;
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>

@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "optimize": "node optimize-images.js"
   },
   "keywords": [
     "sangi",
@@ -14,5 +15,8 @@
     "doorstep-services"
   ],
   "author": "SANGI Technologies",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sharp": "^0.35.4"
+  }
 }
