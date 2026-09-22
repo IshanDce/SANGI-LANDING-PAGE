@@ -1,0 +1,73 @@
+/* ==========================================================================
+   SANGI Brand Design Tokens & Variables
+   Theme: Strictly Green & White (#16A34A, #15803D, #22C55E, #F0FDF4, #FFFFFF)
+   ========================================================================== */
+
+:root {
+  /* Brand Greens */
+  --primary-green: #16A34A;
+  --dark-green: #15803D;
+  --secondary-green: #22C55E;
+  --very-light-green: #F0FDF4;
+  --emerald-50: #ECFDF5;
+  --emerald-100: #D1FAE5;
+  --emerald-200: #A7F3D0;
+  --emerald-800: #065F46;
+  --emerald-900: #064E3B;
+
+  /* Neutrals */
+  --white: #FFFFFF;
+  --bg-page: #F9FAFB;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F3F4F6;
+  --dark-text: #17201A;
+  --secondary-text: #5A695E;
+  --muted-text: #89988D;
+  --border-color: #E5E7EB;
+  --border-light: #F3F4F6;
+  --border-green: rgba(22, 163, 74, 0.25);
+
+  /* Semantic */
+  --accent-gold: #F59E0B;
+  --accent-gold-light: #FEF3C7;
+  --success: #16A34A;
+  --error: #DC2626;
+
+  /* Gradients */
+  --primary-gradient: linear-gradient(135deg, #16A34A 0%, #22C55E 100%);
+  --dark-gradient: linear-gradient(135deg, #15803D 0%, #16A34A 100%);
+  --surface-gradient: linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%);
+  --hero-glow: radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.18) 0%, rgba(240, 253, 244, 0.4) 50%, transparent 80%);
+  --card-hover-border: linear-gradient(135deg, rgba(22, 163, 74, 0.5), rgba(34, 197, 94, 0.2));
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 6px 12px -2px rgba(22, 163, 74, 0.08), 0 3px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 14px 28px -4px rgba(22, 163, 74, 0.12), 0 6px 10px -3px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 24px 38px -6px rgba(22, 163, 74, 0.16), 0 10px 16px -4px rgba(0, 0, 0, 0.06);
+  --shadow-green-btn: 0 8px 20px -4px rgba(22, 163, 74, 0.45);
+  --shadow-green-btn-hover: 0 12px 28px -4px rgba(22, 163, 74, 0.6);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-max: 1320px;
+  --header-height: 80px;
+}

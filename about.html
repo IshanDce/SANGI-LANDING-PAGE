@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - SANGI Doorstep Services</title>
+  <meta name="description" content="Learn about SANGI's mission: transforming local home services with trust, police-verified technicians, transparent ₹30 booking fees, and empowering artisans across India.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .about-page-header {
+      background: var(--surface-gradient);
+      padding: 140px 0 70px;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .story-section {
+      padding: 80px 0;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .story-content h2 {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--dark-text);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .story-content p {
+      font-size: 1.05rem;
+      color: var(--secondary-text);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .values-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 50px;
+    }
+    .value-card-item {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+    }
+    .value-card-item:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary-green);
+      box-shadow: var(--shadow-lg);
+    }
+    .value-card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      background: var(--very-light-green);
+      color: var(--primary-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    .value-card-item h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--dark-text);
+      margin-bottom: 12px;
+    }
+    .value-card-item p {
+      font-size: 0.95rem;
+      color: var(--secondary-text);
+      line-height: 1.6;
+    }
+    .stats-banner {
+      background: var(--dark-gradient);
+      color: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: 60px 40px;
+      margin: 80px auto;
+      text-align: center;
+    }
+    .stats-banner-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .stat-box h4 {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-box span {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+    @media (max-width: 900px) {
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+      .values-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats-banner-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="SANGI Logo">
+        <span>SANGI</span>
+        <span class="brand-badge">About</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#howItWorks" class="nav-link">How It Works</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="terms.html" class="nav-link">Terms & Conditions</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="index.html#services" class="btn btn-primary btn-sm">Explore Services</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Header Banner -->
+    <section class="about-page-header">
+      <div class="container">
+        <span class="section-tag">Who We Are</span>
+        <h1 class="section-title">The Story Behind <span class="highlight">SANGI</span></h1>
+        <p class="section-desc">
+          Empowering skilled neighborhood technicians while providing dependable, safe, and transparent services for Indian homes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Origin Story Section -->
+    <section class="story-section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-content">
+            <span class="section-tag">Our Genesis</span>
+            <h2>Bridging the Trust Gap in Everyday Doorstep Care</h2>
+            <p>
+              In every Indian neighborhood, finding a dependable electrician on short notice, a trustworthy plumber during a pipe emergency, or a certified cleaner often turns into a frustrating ordeal filled with erratic rates, no-shows, and safety concerns.
+            </p>
+            <p>
+              At the same time, thousands of hardworking, skilled artisans—painters, carpenters, AC mechanics, and domestic helpers—struggle with sporadic income, predatory middlemen, and lack of professional dignity.
+            </p>
+            <p>
+              <strong>SANGI</strong> was born to solve both sides of this equation. By combining deep technology, rigorous police-verified KYC, transparent standard rate cards, and an accessible ₹30 base booking fee, SANGI turns irregular service hunts into a seamless 3-tap doorstep reality.
+            </p>
+            <div style="margin-top: 28px;">
+              <a href="index.html#services" class="btn btn-primary">Discover Our 17+ Services</a>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <div style="border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-xl); border: 3px solid var(--border-green);">
+              <img src="assets/images/hero_home_services.jpg" alt="SANGI Home Services Story" style="width: 100%; height: 420px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar Values -->
+        <div class="section-header" style="margin-top: 90px; margin-bottom: 20px;">
+          <span class="section-tag">Core Tenets</span>
+          <h2 class="section-title">What Drives Every <span class="highlight">Decision at SANGI</span></h2>
+        </div>
+
+        <div class="values-cards-grid">
+          <!-- Value 1 -->
+          <div class="value-card-item">
+            <div class="value-card-icon">🛡️</div>
+            <h3>Radical Trust & Safety</h3>
+            <p>
+              Zero compromises on customer security. We enforce strict Aadhaar checks, criminal record verification, and doorstep OTP handshakes before any tool touches your home.
+            </p>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="value-card-item">
+            <div class="value-card-icon">🤝</div>
+            <h3>Partner Dignity & Fair Pay</h3>
+            <p>
+              We treat our electricians, plumbers, and helpers as honored partners, not cogs. Direct payouts, insurance coverage, and fair compensation create happy professionals who deliver exceptional craft.
+            </p>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="value-card-item">
+            <div class="value-card-icon">⚖️</div>
+            <h3>Transparent Simplicity</h3>
+            <p>
+              A modest ₹30 booking fee to dispatch verified help. Clear estimates, zero surprise inflation, and digital receipts ensure total peace of mind for every customer.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stats Banner -->
+        <div class="stats-banner">
+          <span style="background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Real World Impact</span>
+          <h3 style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800; margin-top: 14px;">Growing Every Single Day</h3>
+          <p style="font-size: 1.05rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">From a small pilot in Bangalore to thousands of homes across urban centers, here is our journey in numbers.</p>
+          
+          <div class="stats-banner-grid">
+            <div class="stat-box">
+              <h4>10,000+</h4>
+              <span>Homes Served</span>
+            </div>
+            <div class="stat-box">
+              <h4>500+</h4>
+              <span>Certified Partners</span>
+            </div>
+            <div class="stat-box">
+              <h4>17</h4>
+              <span>Specialized Categories</span>
+            </div>
+            <div class="stat-box">
+              <h4>98.4%</h4>
+              <span>On-Time Arrival Rate</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 SANGI Technologies. All rights reserved.</div>
+        <div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANGI - Trusted Services. Right at Your Doorstep.</title>
+  <meta name="description"
+    content="Book 100% KYC verified home service professionals on SANGI. Electricians, plumbers, AC repairs, house cleaning, and 17+ on-demand services with transparent ₹30 base booking fee.">
+  <meta name="keywords"
+    content="SANGI, home services, electrician, plumber, AC repair, cleaning, painter, on demand doorstep services, sangi apk download">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SANGI - Trusted Services. Right at Your Doorstep.">
+  <meta property="og:description"
+    content="Verified local professionals for repairs, maintenance, cleaning, and lifestyle care. Download the SANGI APK directly to book services or register as staff.">
+  <meta property="og:image" content="assets/images/hero_home_services.jpg">
+
+  <!-- Favicon using official SANGI logo -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       TOP HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogoLink">
+        <img src="assets/images/logo.png" alt="SANGI Official Logo" id="headerLogoImg">
+        <span>SANGI</span>
+        <span class="brand-badge">Doorstep</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="desktopNav">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#howItWorks" class="nav-link">How It Works</a>
+        <a href="#whyUs" class="nav-link">Why SANGI</a>
+        <a href="#ecosystem" class="nav-link">For Partners</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="nav-actions">
+        <button class="btn btn-secondary btn-sm" data-open-modal="downloadModal" id="quickBookHeaderBtn">
+          Book a Service
+        </button>
+        <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary btn-sm" id="downloadAppHeaderBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Download APK</span>
+        </a>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav" id="mobileNav">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+      <img src="assets/images/logo.png" alt="SANGI" style="height:38px;">
+      <strong style="font-size:1.3rem; font-family:var(--font-heading);">SANGI</strong>
+    </div>
+    <a href="#services" class="nav-link">Explore Services</a>
+    <a href="#howItWorks" class="nav-link">How It Works</a>
+    <a href="#whyUs" class="nav-link">Why Choose Us</a>
+    <a href="#ecosystem" class="nav-link">Partner Program</a>
+    <a href="#appDownloadSection" class="nav-link">Download App (APK)</a>
+    <a href="about.html" class="nav-link">About SANGI</a>
+    <a href="terms.html" class="nav-link">Terms & Conditions</a>
+    <a href="#faq" class="nav-link">FAQs</a>
+    <div style="margin-top:auto; display:flex; flex-direction:column; gap:12px;">
+      <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary btn-full">
+        Download SANGI APK
+      </a>
+      <button class="btn btn-secondary btn-full" data-open-modal="downloadModal">
+        App Info & Registration
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section" id="heroSection">
+      <div class="hero-glow-bg"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Text & Search -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="hero-badge-icon"></span>
+              <span>Trusted Local Professionals Across 17+ Categories</span>
+            </div>
+
+            <h1 class="hero-title">
+              Trusted services.<br>
+              Right at your <span class="brand-accent">doorstep.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              From emergency electrical fixes and precision plumbing to deep home cleaning and beauty care—connect with vetted, police-verified neighborhood experts in minutes on the SANGI App.
+            </p>
+
+            <!-- Search Form -->
+            <form class="hero-search-wrapper" id="heroSearchForm">
+              <div class="search-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+              <input type="text" class="hero-search-input" id="heroSearchInput"
+                placeholder="Search plumber, AC service, cleaning, painter..." autocomplete="off">
+              <button type="submit" class="search-submit-btn" id="heroSearchSubmitBtn">
+                <span>Find Service</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </form>
+
+            <!-- Quick Suggestions -->
+            <div class="quick-tags">
+              <span class="quick-tag-label">Trending:</span>
+              <button class="quick-tag-pill" data-service="ac repair">AC Repair</button>
+              <button class="quick-tag-pill" data-service="electrician">Electrician</button>
+              <button class="quick-tag-pill" data-service="cleaning">Deep Cleaning</button>
+              <button class="quick-tag-pill" data-service="plumber">Plumber</button>
+              <button class="quick-tag-pill" data-service="beauty">Salon at Home</button>
+            </div>
+
+            <!-- Trust Bar -->
+            <div class="hero-trust-bar">
+              <div class="trust-item">
+                <div class="trust-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="trust-text">
+                  <h4>100% KYC Verified</h4>
+                  <p>Background checked staff</p>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                <div class="trust-text">
+                  <h4>₹30 Flat Booking Fee</h4>
+                  <p>Transparent upfront pricing</p>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="trust-text">
+                  <h4>Guaranteed Redo</h4>
+                  <p>If not 100% satisfied</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual with AI Image & Dynamic Cards -->
+          <div class="hero-visual">
+            <div class="hero-main-img-card">
+              <img src="assets/images/hero_home_services.jpg" alt="SANGI Verified Professional Helping Happy Homeowner">
+            </div>
+
+            <!-- Floating Card Top -->
+            <div class="floating-badge badge-top">
+              <div class="badge-avatar">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="badge-info">
+                <h5>Ramesh K. (Electrician)</h5>
+                <p>Arrived in 18 mins • OTP Verified</p>
+                <div class="badge-stars">★★★★★ (4.95)</div>
+              </div>
+            </div>
+
+            <!-- Floating Card Bottom -->
+            <div class="floating-badge badge-bottom">
+              <div class="badge-avatar" style="background:#FEF3C7; color:#D97706; border-color:#FDE68A;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                  </polygon>
+                </svg>
+              </div>
+              <div class="badge-info">
+                <h5>Top Rated Home Care</h5>
+                <p>Over 10,000+ Completed Tasks</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PROMINENT HOMEPAGE DOWNLOAD APP FEATURE CARD (WITH AI ARTWORK & DIRECT APK)
+         ====================================================================== -->
+    <section class="section section-light" id="appDownloadSection" style="padding-top: 50px; padding-bottom: 50px;">
+      <div class="container">
+        <div class="download-highlight-card">
+          <div class="download-card-visual">
+            <img src="assets/images/download_app_icon.jpg" alt="Download SANGI App">
+          </div>
+          <div class="download-card-info">
+            <span class="section-tag" style="margin-bottom: 12px;">Mobile Application</span>
+            <h3>Download SANGI App to Book Services or Register as Staff</h3>
+            <p>
+              All customer bookings, live technician GPS tracking, and staff partner registrations are operated seamlessly on the official <strong>SANGI mobile app</strong>. Download the official Android APK directly to get started!
+            </p>
+
+            <div class="download-pill-badges">
+              <span class="download-pill-item">✓ For Customers: 17+ Doorstep Services</span>
+              <span class="download-pill-item">✓ For Staff: Fast KYC & Instant Payouts</span>
+              <span class="download-pill-item">✓ Nominal ₹30 Base Fee</span>
+            </div>
+
+            <div class="download-buttons-group">
+              <!-- Single Direct Download APK Button -->
+              <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary btn-lg" id="directApkDownloadBtn" style="padding: 16px 36px; font-size: 1.08rem; gap: 12px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download SANGI App (Direct APK)</span>
+              </a>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--secondary-text); display: block; margin-top: 10px;">
+              ⚡ Android Package (.apk) • Direct One-Click Install • Verified & Secure
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         METRICS STRIP
+         ====================================================================== -->
+    <section class="metrics-strip" id="metricsStrip">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-num">17+</div>
+            <div class="metric-label">Specialized Services</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-num">10,000+</div>
+            <div class="metric-label">Happy Indian Homes</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-num">500+</div>
+            <div class="metric-label">Verified Staff & Pros</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-num">4.9 ★</div>
+            <div class="metric-label">Customer Satisfaction Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SERVICES SHOWCASE (ALL 17 APPS SERVICES)
+         ====================================================================== -->
+    <section class="section section-light" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Complete Catalog</span>
+          <h2 class="section-title">Our <span class="highlight">Offered Services</span></h2>
+          <p class="section-desc">
+            Explore our complete suite of everyday home, technical, lifestyle, and emergency doorstep solutions backed by verified professionals.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="services-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Services (17)</button>
+          <button class="filter-btn" data-filter="repairs">Technical & Repairs</button>
+          <button class="filter-btn" data-filter="cleaning">Cleaning & Gardening</button>
+          <button class="filter-btn" data-filter="appliances">Appliances & AC</button>
+          <button class="filter-btn" data-filter="care">Care & Logistics</button>
+          <button class="filter-btn" data-filter="lifestyle">Beauty & Events</button>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid" id="servicesGrid">
+
+          <!-- 1. AC Repair -->
+          <article class="service-card" data-category="appliances">
+            <div class="service-card-img">
+              <img src="assets/images/services/ac_repair.png" alt="AC Repair Service" loading="lazy">
+              <span class="service-badge">Appliances</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">AC Repair & Service</h3>
+              <p class="service-card-desc">Deep jet-cleaning, refrigerant gas leak detection, compressor maintenance & cooling optimization.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Appliance Repair -->
+          <article class="service-card" data-category="appliances">
+            <div class="service-card-img">
+              <img src="assets/images/services/appliance_repair.png" alt="Appliance Repair Service" loading="lazy">
+              <span class="service-badge">Appliances</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Appliance Repair</h3>
+              <p class="service-card-desc">Expert diagnostics and repairs for refrigerators, washing machines, microwaves, and chimneys.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Beauty & Makeup -->
+          <article class="service-card" data-category="lifestyle">
+            <div class="service-card-img">
+              <img src="assets/images/services/beauty_makeup.png" alt="Beauty & Makeup Service" loading="lazy">
+              <span class="service-badge">Lifestyle</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Beauty & Makeup</h3>
+              <p class="service-card-desc">Hygienic salon treatments, hair styling, facials, waxing, manicures, and event makeover at home.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Caretaker -->
+          <article class="service-card" data-category="care">
+            <div class="service-card-img">
+              <img src="assets/images/services/caretaker.png" alt="Caretaker Service" loading="lazy">
+              <span class="service-badge">Care</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Caretaker Assistance</h3>
+              <p class="service-card-desc">Compassionate and trained elderly care, patient companionship, medical monitoring & daily assistance.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Carpenter -->
+          <article class="service-card" data-category="repairs">
+            <div class="service-card-img">
+              <img src="assets/images/services/carpenter.png" alt="Carpenter Service" loading="lazy">
+              <span class="service-badge">Repairs</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Carpenter & Woodwork</h3>
+              <p class="service-card-desc">Furniture assembling, door latch alignments, modular kitchen fixes, lock repairs & custom cabinets.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. CCTV Installation -->
+          <article class="service-card" data-category="repairs">
+            <div class="service-card-img">
+              <img src="assets/images/services/cctv.png" alt="CCTV Installation" loading="lazy">
+              <span class="service-badge">Security</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">CCTV Installation</h3>
+              <p class="service-card-desc">High-definition security camera setup, DVR/NVR wiring, mobile app monitoring configuration & perimeter testing.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Cleaning -->
+          <article class="service-card" data-category="cleaning">
+            <div class="service-card-img">
+              <img src="assets/images/services/cleaning.png" alt="Home Cleaning Service" loading="lazy">
+              <span class="service-badge">Cleaning</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Deep Home Cleaning</h3>
+              <p class="service-card-desc">Full house intensive cleaning, kitchen tile scrubbing, sofa vacuuming, bathroom disinfection & polishing.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Electrician -->
+          <article class="service-card" data-category="repairs">
+            <div class="service-card-img">
+              <img src="assets/images/services/electrician.png" alt="Electrician Service" loading="lazy">
+              <span class="service-badge">Repairs</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Electrician</h3>
+              <p class="service-card-desc">Short-circuit troubleshooting, fan/inverter setup, MCB trip repairs, decorative lighting & switchboards.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Gardening -->
+          <article class="service-card" data-category="cleaning">
+            <div class="service-card-img">
+              <img src="assets/images/services/gardening.png" alt="Gardening Service" loading="lazy">
+              <span class="service-badge">Gardening</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Gardening & Lawn Care</h3>
+              <p class="service-card-desc">Trimming, organic composting, seasonal potting, plant disease treatment & terrace garden maintenance.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Household -->
+          <article class="service-card" data-category="care">
+            <div class="service-card-img">
+              <img src="assets/images/services/household.png" alt="Household Service" loading="lazy">
+              <span class="service-badge">Household</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Household Helpers</h3>
+              <p class="service-card-desc">Dependable daily home chores, closet de-cluttering, utensil cleaning aid & flexible domestic assistance.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. Laundry -->
+          <article class="service-card" data-category="cleaning">
+            <div class="service-card-img">
+              <img src="assets/images/services/laundry.png" alt="Laundry Service" loading="lazy">
+              <span class="service-badge">Cleaning</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Laundry & Dry Cleaning</h3>
+              <p class="service-card-desc">Crisp steam ironing, gentle fabric wash, stain elimination & convenient doorstep collection and drop-off.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12. Moving & Packing -->
+          <article class="service-card" data-category="care">
+            <div class="service-card-img">
+              <img src="assets/images/services/moving.png" alt="Moving and Packing" loading="lazy">
+              <span class="service-badge">Logistics</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Moving & Packing</h3>
+              <p class="service-card-desc">Secure bubble wrap, furniture dismantling, safe transport vehicle loading & scratch-free delivery.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 13. Painting -->
+          <article class="service-card" data-category="repairs">
+            <div class="service-card-img">
+              <img src="assets/images/services/painting.png" alt="Painting Service" loading="lazy">
+              <span class="service-badge">Repairs</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">House Painting</h3>
+              <p class="service-card-desc">Wall waterproofing, premium emulsions, texture design coats, surface priming & dustless sanding.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 14. Party & Decoration -->
+          <article class="service-card" data-category="lifestyle">
+            <div class="service-card-img">
+              <img src="assets/images/services/party_decoration.png" alt="Party Decoration" loading="lazy">
+              <span class="service-badge">Lifestyle</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Party & Event Decoration</h3>
+              <p class="service-card-desc">Themed birthday arches, fairy lights, floral stage backdrops & festive celebration decor installations.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 15. Pest Control -->
+          <article class="service-card" data-category="cleaning">
+            <div class="service-card-img">
+              <img src="assets/images/services/pest_control.png" alt="Pest Control" loading="lazy">
+              <span class="service-badge">Hygiene</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Pest Control</h3>
+              <p class="service-card-desc">Herbal cockroach gel, odor-free anti-termite treatment, mosquito eradication & bedbug elimination.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 16. Plumber -->
+          <article class="service-card" data-category="repairs">
+            <div class="service-card-img">
+              <img src="assets/images/services/plumber.png" alt="Plumber Service" loading="lazy">
+              <span class="service-badge">Repairs</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Plumber & Pipe Works</h3>
+              <p class="service-card-desc">Clogged sink drainage, pipeline leakage sealing, bathroom sanitary fittings, pumps & geyser lines.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 17. Water Purifier -->
+          <article class="service-card" data-category="appliances">
+            <div class="service-card-img">
+              <img src="assets/images/services/water_purifier.png" alt="Water Purifier Service" loading="lazy">
+              <span class="service-badge">Appliances</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Water Purifier & RO</h3>
+              <p class="service-card-desc">Sediment & carbon filter replacement, RO membrane cleansing, TDS balance adjustment & pump repairs.</p>
+              <div class="service-card-footer">
+                <div class="service-fee">Booking: <strong>₹30 base</strong></div>
+                <button class="service-book-btn" data-open-modal="downloadModal">Book on App</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         HOW IT WORKS
+         ====================================================================== -->
+    <section class="section section-tint" id="howItWorks">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Seamless Experience</span>
+          <h2 class="section-title">How <span class="highlight">SANGI Works</span></h2>
+          <p class="section-desc">
+            Booking home services should be as simple and predictable as hailing a ride. Here is our straightforward 4-step process on the SANGI App.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon-wrap">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="step-title">Choose Service</h3>
+            <p class="step-desc">Pick from 17+ specialized services on the SANGI App, select your preferred date, time slot, and tell us the issue.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon-wrap">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="step-title">Instant Verified Match</h3>
+            <p class="step-desc">Pay nominal ₹30 booking fee. Our smart matching algorithm connects you to the closest background-checked pro.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon-wrap">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="step-title">Doorstep Delivery</h3>
+            <p class="step-desc">The pro arrives with required tools and identity badge. Safe service initiation with customer-generated OTP.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-icon-wrap">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="step-title">Pay After Satisfaction</h3>
+            <p class="step-desc">Inspect completed work. Pay transparent service labor bills via UPI, card, or SANGI wallet only when pleased.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         WHY CHOOSE SANGI (TRUST & SAFETY)
+         ====================================================================== -->
+    <section class="section section-light" id="whyUs">
+      <div class="container">
+        <div class="trust-split-grid">
+          <div class="trust-features-list">
+            <div class="section-header text-left" style="margin-bottom: 28px;">
+              <span class="section-tag">Safety & Quality First</span>
+              <h2 class="section-title">Built on <span class="highlight">Uncompromising Trust</span></h2>
+              <p class="section-desc">
+                Your home is your sanctuary. SANGI enforces strict quality controls and digital security safeguards so you have absolute peace of mind.
+              </p>
+            </div>
+
+            <div class="trust-feature-item">
+              <div class="trust-feat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="trust-feat-content">
+                <h4>100% Aadhaar & Police Verified Staff</h4>
+                <p>Every technician completes comprehensive identity checks, address validation, and police criminal record screening before onboarding.</p>
+              </div>
+            </div>
+
+            <div class="trust-feature-item">
+              <div class="trust-feat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div class="trust-feat-content">
+                <h4>Zero Hidden Surcharges</h4>
+                <p>Strictly standard rate cards. Pay just ₹30 booking fee to dispatch a professional, and inspect itemized labor bills before paying.</p>
+              </div>
+            </div>
+
+            <div class="trust-feature-item">
+              <div class="trust-feat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <div class="trust-feat-content">
+                <h4>Guaranteed 30-Day Service Warranty</h4>
+                <p>If any repaired fitting or appliance faces an issue within 30 days, we dispatch a senior expert for free re-inspection and rework.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3D Trust Badge Visual -->
+          <div class="trust-visual-center">
+            <img src="assets/images/trust_guarantee.jpg" alt="100% Satisfaction Guarantee SANGI Trust Badge">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         DUAL ECOSYSTEM (CUSTOMERS & PARTNERS)
+         ====================================================================== -->
+    <section class="section section-tint" id="ecosystem">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Two Empowered Sides</span>
+          <h2 class="section-title">A Seamless Platform for <span class="highlight">Everyone</span></h2>
+          <p class="section-desc">
+            Whether you need reliable home assistance or you are a skilled craftsperson seeking fair, steady income, SANGI is designed for you.
+          </p>
+        </div>
+
+        <div class="ecosystem-grid">
+          <!-- Customer Card -->
+          <div class="ecosystem-card customer-card">
+            <span class="eco-top-badge">For Homeowners</span>
+            <h3 class="eco-title">Effortless Home Management</h3>
+            <p class="eco-desc">
+              Schedule dependable repairs in 3 taps on the SANGI App, track your assigned professional on live GPS, and pay through your preferred digital methods.
+            </p>
+            <div class="eco-img-preview">
+              <img src="assets/images/customer_role.png" alt="SANGI Customer Experience">
+            </div>
+            <div class="eco-points">
+              <div class="eco-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Live GPS tracking & OTP verified arrivals</span>
+              </div>
+              <div class="eco-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Full booking history & digital tax invoices</span>
+              </div>
+              <div class="eco-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>In-app wallet with instant refund protection</span>
+              </div>
+            </div>
+            <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download App to Book</span>
+            </a>
+          </div>
+
+          <!-- Staff / Partner Card -->
+          <div class="ecosystem-card partner-card">
+            <span class="eco-top-badge" style="background:#ECFDF5; color:#065F46;">For Skilled Professionals</span>
+            <h3 class="eco-title">Grow Your Earnings as a Partner</h3>
+            <p class="eco-desc">
+              Join 500+ verified electricians, plumbers, and technicians. Enjoy zero commission gouging, flexible hours, and guaranteed fast payouts.
+            </p>
+            <div class="eco-img-preview">
+              <img src="assets/images/staff_role.png" alt="SANGI Staff Partner Role">
+            </div>
+            <div class="eco-points">
+              <div class="eco-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Earn up to ₹45,000+ monthly with steady nearby bookings</span>
+              </div>
+              <div class="eco-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Daily instant wallet withdrawals to your bank account</span>
+              </div>
+              <div class="eco-point">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Complimentary accidental insurance & branded work kits</span>
+              </div>
+            </div>
+            <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download App to Register</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Full Width Partner Banner with AI Photo -->
+        <div id="partnerBanner"
+          style="margin-top: 48px; border-radius: var(--radius-2xl); overflow: hidden; position: relative; box-shadow: var(--shadow-xl); border: 2px solid var(--border-green);">
+          <img src="assets/images/join_pro_banner.jpg" alt="Join SANGI Professional Technicians Team"
+            style="width:100%; max-height: 440px; object-fit: cover;">
+          <div
+            style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6, 78, 59, 0.92) 0%, rgba(22, 163, 74, 0.6) 60%, transparent 100%); display: flex; align-items: center; padding: 40px 60px;">
+            <div style="max-width: 520px; color: white;">
+              <span
+                style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Staff
+                Onboarding</span>
+              <h3
+                style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; margin: 12px 0; line-height: 1.2;">
+                Ready to Work with Dignity & High Earnings?</h3>
+              <p style="font-size: 1rem; opacity: 0.95; margin-bottom: 24px; line-height: 1.5;">
+                Download the SANGI App APK, select 'Register as Staff', complete simple 3-step KYC verification, and start accepting job requests in your neighborhood.
+              </p>
+              <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-white">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download SANGI APK</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CUSTOMER REVIEWS & SOCIAL PROOF
+         ====================================================================== -->
+    <section class="section section-light" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Customer Stories</span>
+          <h2 class="section-title">Loved by <span class="highlight">10,000+ Homes</span></h2>
+          <p class="section-desc">
+            Real feedback from verified homeowners who found peace of mind with SANGI's punctual and professional doorstep staff.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <div class="review-avatar">AK</div>
+                <div class="review-user-info">
+                  <h5>Ananya Kapoor <span class="review-verified">✓ Verified Homeowner</span></h5>
+                  <span>Bangalore • AC Servicing</span>
+                </div>
+              </div>
+              <div class="star-rating" style="margin-bottom: 12px;">★★★★★</div>
+              <p class="review-text">
+                "Our split AC was making a loud buzzing noise and barely cooling during peak summer. SANGI's technician arrived within 30 minutes, cleaned the filters, filled the refrigerant gas, and explained everything transparently. Highly recommended!"
+              </p>
+            </div>
+            <div class="review-footer">
+              <span class="review-service-tag">AC Repair</span>
+              <span>2 days ago</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <div class="review-avatar">RS</div>
+                <div class="review-user-info">
+                  <h5>Rohit Sharma <span class="review-verified">✓ Verified Homeowner</span></h5>
+                  <span>Hyderabad • Plumbing Fix</span>
+                </div>
+              </div>
+              <div class="star-rating" style="margin-bottom: 12px;">★★★★★</div>
+              <p class="review-text">
+                "Had a serious main pipe leakage in my kitchen on Sunday evening. Other local apps had no technicians available. SANGI matched me to Suresh in 5 minutes with a transparent ₹30 fee. Fixed the line flawlessly!"
+              </p>
+            </div>
+            <div class="review-footer">
+              <span class="review-service-tag">Plumber</span>
+              <span>1 week ago</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div>
+              <div class="review-header">
+                <div class="review-avatar">PM</div>
+                <div class="review-user-info">
+                  <h5>Priya Menon <span class="review-verified">✓ Verified Homeowner</span></h5>
+                  <span>Chennai • Deep Home Cleaning</span>
+                </div>
+              </div>
+              <div class="star-rating" style="margin-bottom: 12px;">★★★★★</div>
+              <p class="review-text">
+                "Booked deep cleaning before Diwali. The team brought industrial vacuums, eco-friendly scrubbing agents, and left the bathrooms and kitchen smelling brand new. The fact that all staff are police-verified gave me complete safety."
+              </p>
+            </div>
+            <div class="review-footer">
+              <span class="review-service-tag">Deep Cleaning</span>
+              <span>2 weeks ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         ABOUT US OVERVIEW
+         ====================================================================== -->
+    <section class="section section-tint" id="about">
+      <div class="container">
+        <div class="about-split">
+          <div class="about-text">
+            <span class="section-tag">Our Mission</span>
+            <h3>Re-imagining Local Services with Dignity, Technology & Trust</h3>
+            <p>
+              Founded with the conviction that every Indian household deserves prompt, safe, and dependable services, <strong>SANGI</strong> was built to eliminate the chaos of unverified street labor and inflated intermediary commissions.
+            </p>
+            <p>
+              We empower skilled local electricians, carpenters, plumbers, and domestic artisans with digital tools, guaranteed fair wages, and customer protection. Our platform ensures customers get professional standard work with a modest ₹30 booking fee and 100% satisfaction guarantee.
+            </p>
+
+            <div class="about-values-grid">
+              <div class="value-pill">
+                <div class="value-pill-icon">✓</div>
+                <div class="value-pill-text">
+                  <h5>100% Police Verified</h5>
+                  <p>Stringent identity checks</p>
+                </div>
+              </div>
+              <div class="value-pill">
+                <div class="value-pill-icon">₹</div>
+                <div class="value-pill-text">
+                  <h5>Fair & Clear Pricing</h5>
+                  <p>No sudden surcharges</p>
+                </div>
+              </div>
+              <div class="value-pill">
+                <div class="value-pill-icon">⏱</div>
+                <div class="value-pill-text">
+                  <h5>Punctual Arrival</h5>
+                  <p>Live GPS countdown</p>
+                </div>
+              </div>
+              <div class="value-pill">
+                <div class="value-pill-icon">★</div>
+                <div class="value-pill-text">
+                  <h5>30-Day Guarantee</h5>
+                  <p>Free rework on issues</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:16px;">
+              <a href="about.html" class="btn btn-primary">Read Full Company Story</a>
+              <button class="btn btn-outline" data-open-modal="termsModal">View Terms & Conditions</button>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <div style="background: var(--white); padding: 16px; border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl); border: 2px solid var(--border-green);">
+              <img src="assets/images/splash.png" alt="SANGI Platform Experience"
+                style="border-radius: var(--radius-xl); width: 100%; max-height: 480px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FREQUENTLY ASKED QUESTIONS (FAQ)
+         ====================================================================== -->
+    <section class="section section-light" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+          <p class="section-desc">
+            Everything you need to know about our services, booking policies, security safeguards, and staff verification.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>What is the ₹30 booking fee and how is it used?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The ₹30 platform booking fee covers the administrative cost of real-time GPS matching, technician dispatch, KYC background checks, and service guarantee insurance. This nominal fee is paid upon booking confirmation. The actual service labor charges are billed separately only after the work is completely finished and inspected by you.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How are SANGI service professionals verified?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Every technician undergoes an extensive 4-tier onboarding process: Aadhaar biometric verification, police criminal history verification, trade test / skill evaluation, and in-person safety and etiquette training. Each professional carries an official digital ID badge with QR code verification.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What if I am not satisfied with the completed work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>SANGI provides a comprehensive 30-day service guarantee. If an issue reoccurs or the service does not meet quality expectations, simply raise a support request via the app or website. We will send a senior supervisor to re-evaluate and rectify the issue free of cost, or initiate a full refund.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I reschedule or cancel a booking?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You can reschedule or cancel your service booking free of charge up to 1 hour before the scheduled arrival time directly through the app. For cancellations made within the free window, any pre-paid booking fee is automatically refunded back to your SANGI Wallet instantly.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do payments work for spare parts and materials?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>If your repair requires replacement parts (e.g., replacement pipe, capacitor, MCB switch, or AC refrigerant gas), our technician will provide an itemized retail invoice before purchasing. You can either purchase the parts yourself from a trusted hardware store or have our technician supply them at official MRP.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I join as a SANGI Service Professional / Partner?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Download the SANGI App APK and select 'Register as Staff'. Upload your Aadhaar, bank account details, and trade experience. Once verified by our onboarding team within 24 hours, you can start receiving high-paying local bookings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color:white;">
+            <img src="assets/images/logo.png" alt="SANGI Logo" style="height:44px; filter: brightness(1.1);">
+            <span>SANGI</span>
+          </a>
+          <p>
+            India's trusted on-demand doorstep service platform. Certified electricians, plumbers, home cleaners, and appliance technicians at your fingertips.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="social-link" aria-label="Facebook">FB</a>
+            <a href="#" class="social-link" aria-label="Twitter">X</a>
+            <a href="#" class="social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+
+        <!-- Quick Services -->
+        <div class="footer-col">
+          <h5>Quick Services</h5>
+          <div class="footer-links">
+            <a href="#services">Electrician Services</a>
+            <a href="#services">Plumbing Solutions</a>
+            <a href="#services">AC Servicing & Gas</a>
+            <a href="#services">Deep Home Cleaning</a>
+            <a href="#services">Beauty & Salon at Home</a>
+            <a href="#services">Packers & Movers</a>
+          </div>
+        </div>
+
+        <!-- Company & Legal -->
+        <div class="footer-col">
+          <h5>Company & Legal</h5>
+          <div class="footer-links">
+            <a href="about.html">About SANGI</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="#" data-open-modal="termsModal">Quick Terms Modal</a>
+            <a href="#whyUs">Safety & KYC Verification</a>
+            <a href="#faq">Frequently Asked Questions</a>
+            <a href="downloads/sangi.apk" download="sangi.apk">Download SANGI APK</a>
+          </div>
+        </div>
+
+        <!-- Contact & Support -->
+        <div class="footer-col">
+          <h5>Contact Us</h5>
+          <div class="footer-contact-list">
+            <div class="contact-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>SANGI Technologies Pvt Ltd, 4th Floor, Greenview Tech Park, Bangalore, India</span>
+            </div>
+            <div class="contact-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 (800) 123-SANGI</span>
+            </div>
+            <div class="contact-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>support@sangi.in</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 SANGI Technologies. All rights reserved. Strictly Green & White Design Standard.
+        </div>
+        <div>
+          <a href="terms.html">Terms of Service</a>
+          <a href="terms.html#privacy">Privacy Policy</a>
+          <a href="terms.html#refund">Refund Policy</a>
+          <a href="terms.html#kyc">Staff KYC Norms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL 1: DOWNLOAD APP TO BOOK & REGISTER MODAL (DIRECT APK)
+       ======================================================================== -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Download the SANGI App</span>
+        </div>
+        <button class="modal-close-btn" data-close-modal aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="download-modal-grid">
+          <div class="download-modal-img">
+            <img src="assets/images/download_app_icon.jpg" alt="SANGI Mobile App Download">
+          </div>
+          <div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--dark-text); margin-bottom: 8px;">
+              Bookings & Registrations are on the App!
+            </h4>
+            <p style="font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 16px;">
+              To book a technician or register as verified staff, install the official SANGI Android APK directly on your device.
+            </p>
+
+            <div class="download-role-box">
+              <h5>👤 For Customers</h5>
+              <p>Book 17+ services with live GPS tracking, OTP security & nominal ₹30 booking fee.</p>
+            </div>
+
+            <div class="download-role-box">
+              <h5>🛠️ For Staff & Partners</h5>
+              <p>Register as a skilled technician, complete easy KYC, and receive daily local jobs with instant payouts.</p>
+            </div>
+
+            <!-- Single Direct Download Button in Modal -->
+            <div style="margin-top: 18px;">
+              <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary btn-full btn-lg" style="gap: 10px; font-size: 1.05rem;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download SANGI APK (Direct Install)</span>
+              </a>
+              <span style="font-size: 0.78rem; color: var(--muted-text); display: block; text-align: center; margin-top: 8px;">
+                Direct .apk file download • Size ~69 MB
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: COMPREHENSIVE TERMS AND CONDITIONS
+       ======================================================================== -->
+  <div class="modal-overlay" id="termsModal">
+    <div class="modal-dialog modal-large">
+      <div class="modal-header">
+        <div class="modal-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>SANGI Terms & Conditions</span>
+        </div>
+        <button class="modal-close-btn" data-close-modal aria-label="Close terms">&times;</button>
+      </div>
+      <div class="modal-body legal-content">
+        <p style="font-size:0.85rem; color:var(--muted-text); margin-bottom:16px;">
+          Last Updated: September 2026 | Effective for all SANGI Customers & Partner Technicians
+        </p>
+
+        <h3>1. Agreement to Terms</h3>
+        <p>
+          By downloading, installing, or accessing the SANGI mobile application or website ("Platform"), operated by SANGI Technologies ("Company", "we", "our", or "us"), you agree to be bound by these Terms and Conditions. If you do not agree with any provision, you must discontinue using our services immediately.
+        </p>
+
+        <h3>2. Description of Services & Intermediary Role</h3>
+        <p>
+          SANGI operates a technology-driven hyperlocal marketplace platform connecting consumers seeking home, repair, cleaning, care, and lifestyle services ("Customers") with certified, background-verified independent service professionals and staff ("Partners"). SANGI facilitates dispatch, scheduling, in-app communication, quality monitoring, and secure payments.
+        </p>
+
+        <h3>3. Platform Booking Fee & Pricing Policy</h3>
+        <p>
+          To maintain rigorous quality standards, ongoing background verification, emergency response operations, and insurance coverage, SANGI charges a standard nominal base booking fee of <strong>₹30 (Thirty Rupees)</strong> for every confirmed service booking.
+        </p>
+        <ul>
+          <li>The ₹30 booking fee is payable upon scheduling the service to secure technician allocation.</li>
+          <li>Estimated labor charges for services (such as plumbing, electrical work, or AC maintenance) are provided upfront as transparent standard estimates.</li>
+          <li>Final service costs may adjust if the scope of work changes upon in-person diagnostic inspection with customer consent.</li>
+          <li>All spare parts or replacement hardware are billed separately at MRP with authentic retailer invoices.</li>
+        </ul>
+
+        <h3>4. Verification, Safety & OTP Protocol</h3>
+        <p>
+          SANGI subjects all service personnel to multi-tier identity checks, including government Aadhaar verification and criminal record background checks. For security, every service appointment generates a unique 4-digit One-Time Password (OTP) in the customer app. The technician cannot begin the service until the customer physically reveals the OTP at the doorstep.
+        </p>
+
+        <h3>5. Cancellation and Refund Policy</h3>
+        <ul>
+          <li><strong>Free Cancellation:</strong> Customers may cancel or reschedule a scheduled booking free of charge up to 60 minutes before the scheduled time slot.</li>
+          <li><strong>Booking Fee Refund:</strong> In the event of a timely cancellation, the ₹30 booking fee is credited back instantly to your SANGI Wallet or original payment method within 3 to 5 business days.</li>
+          <li><strong>Late Cancellation:</strong> Cancellations made when the technician is already en route (within 30 minutes of arrival) may forfeit the ₹30 base fee to compensate the technician for transportation expenses.</li>
+        </ul>
+
+        <h3>6. 30-Day Quality Guarantee</h3>
+        <p>
+          We stand firmly behind our artisans' workmanship. All physical repairs and installations carry a 30-day SANGI Guarantee. If a diagnosed issue recurs under normal usage within 30 days of service completion, SANGI will arrange a free inspection and rectification.
+        </p>
+
+        <h3>7. Customer Responsibilities</h3>
+        <p>
+          Customers agree to provide a safe, respectful working environment for service professionals, ensure an adult occupant is present during the entire service duration, and safeguard personal valuables.
+        </p>
+
+        <h3>8. Limitation of Liability</h3>
+        <p>
+          SANGI maintains appropriate comprehensive partner insurance coverage. However, SANGI is not liable for pre-existing structural defects, unauthorized offline cash transactions arranged directly with staff outside the SANGI platform, or wear-and-tear damages beyond the verified scope of work.
+        </p>
+
+        <h3>9. Dispute Redressal & Contact</h3>
+        <p>
+          For any disputes, grievances, or service escalations, our dedicated grievance officer can be reached at <strong>support@sangi.in</strong> or via our 24/7 in-app help desk.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="terms.html" class="btn btn-outline btn-sm">Open Full Legal Page</a>
+        <button type="button" class="btn btn-primary btn-sm" data-close-modal>I Understand & Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/app.js"></script>
+  <script src="js/modal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,485 @@
+/* ==========================================================================
+   SANGI - Component Styles (Buttons, Modals, Reviews, Badges, Download Card)
+   ========================================================================== */
+
+@import './variables.css';
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 13px 26px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: var(--white);
+  box-shadow: var(--shadow-green-btn);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #15803D 0%, #16A34A 100%);
+  box-shadow: var(--shadow-green-btn-hover);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--very-light-green);
+  color: var(--dark-green);
+  border-color: var(--border-green);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--dark-text);
+  border-color: var(--border-color);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  background: var(--very-light-green);
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--dark-green);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-white:hover {
+  background: var(--very-light-green);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1.05rem;
+  border-radius: var(--radius-lg);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* Star Rating */
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--accent-gold);
+  font-size: 0.95rem;
+}
+
+/* Testimonial Cards */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-green);
+  box-shadow: var(--shadow-md);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--very-light-green);
+  color: var(--dark-green);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border: 2px solid var(--border-green);
+}
+
+.review-user-info h5 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  line-height: 1.2;
+}
+
+.review-user-info span {
+  font-size: 0.78rem;
+  color: var(--secondary-text);
+}
+
+.review-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  background: var(--very-light-green);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  margin-left: 6px;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.8rem;
+  color: var(--muted-text);
+}
+
+.review-service-tag {
+  background: var(--bg-page);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--secondary-text);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   HOMEPAGE PROMINENT DOWNLOAD APP FEATURE CARD
+   ========================================================================== */
+.download-highlight-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F0FDF4 100%);
+  border: 2px solid rgba(22, 163, 74, 0.3);
+  border-radius: var(--radius-2xl);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 48px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+  margin: 30px auto;
+  max-width: 1080px;
+}
+
+.download-highlight-card::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.download-card-visual {
+  text-align: center;
+  position: relative;
+}
+
+.download-card-visual img {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  filter: drop-shadow(0 14px 25px rgba(22, 163, 74, 0.22));
+  transition: transform var(--transition-normal);
+}
+
+.download-card-visual:hover img {
+  transform: scale(1.03);
+}
+
+.download-card-info h3 {
+  font-family: var(--font-heading);
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: var(--dark-text);
+  line-height: 1.22;
+  margin-bottom: 14px;
+}
+
+.download-card-info p {
+  font-size: 1.05rem;
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.download-pill-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.download-pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--white);
+  border: 1px solid var(--border-green);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark-green);
+}
+
+.download-buttons-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ==========================================================================
+   MODAL DIALOGS
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 620px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.94) translateY(20px);
+  transition: transform var(--transition-normal);
+  overflow: hidden;
+  border: 1px solid var(--border-green);
+}
+
+.modal-dialog.modal-large {
+  max-width: 860px;
+}
+
+.modal-overlay.open .modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+.modal-header {
+  padding: 24px 30px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, var(--very-light-green) 0%, var(--white) 100%);
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  color: var(--secondary-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background: var(--very-light-green);
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.modal-body {
+  padding: 30px;
+  overflow-y: auto;
+  line-height: 1.65;
+  color: var(--secondary-text);
+}
+
+.modal-footer {
+  padding: 20px 30px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  background: var(--bg-page);
+}
+
+/* Download Modal Grid */
+.download-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.download-modal-img {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--border-green);
+}
+
+.download-modal-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.download-role-box {
+  background: var(--very-light-green);
+  border: 1px solid var(--border-green);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.download-role-box h5 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--dark-green);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.download-role-box p {
+  font-size: 0.84rem;
+  color: var(--secondary-text);
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Legal text formatting inside Terms modal */
+.legal-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.legal-content h3:first-child {
+  margin-top: 0;
+}
+
+.legal-content p {
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.legal-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.legal-content li {
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .download-highlight-card {
+    grid-template-columns: 1fr;
+    padding: 28px 20px;
+    text-align: center;
+  }
+  .download-pill-badges {
+    justify-content: center;
+  }
+  .download-buttons-group {
+    justify-content: center;
+  }
+  .download-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
