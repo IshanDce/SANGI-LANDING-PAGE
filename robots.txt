@@ -14,4 +14,4 @@ Allow: /
 Crawl-delay: 2
 
 # Sitemap location
-Sitemap: https://sangi.in/sitemap.xml
+Sitemap: https://sangiservices.in/sitemap.xml
