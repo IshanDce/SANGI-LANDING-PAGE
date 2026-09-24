@@ -1,0 +1,17 @@
+﻿User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /downloads/
+Disallow: /.git/
+
+# Allow major crawlers specifically
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Sitemap location
+Sitemap: https://sangi.in/sitemap.xml
