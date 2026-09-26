@@ -1,8 +1,16 @@
 /* ==========================================================================
-   SANGI - Responsive Breakpoints & Mobile Adaptations
+   SANGI - Modern, Fluid Responsive Breakpoints & Mobile Optimization
    ========================================================================== */
 
-/* Large Tablets and Laptops (<= 1200px) */
+/* Prevent horizontal overflow on all viewports */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Large Tablets and Small Laptops (<= 1200px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .nav-menu {
     gap: 16px;
@@ -13,14 +21,27 @@
   .brand-badge {
     display: none;
   }
+  .hero-grid {
+    gap: 36px;
+  }
+  .trust-split-grid {
+    gap: 40px;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
 }
 
-/* Laptops, Tablets, and Compact Screens (<= 1024px) */
+/* --------------------------------------------------------------------------
+   Tablets and Medium Screens (<= 1024px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   :root {
-    --header-height: 74px;
+    --header-height: 72px;
   }
 
+  /* Navigation */
   .nav-menu,
   .nav-actions .btn-secondary {
     display: none;
@@ -30,15 +51,21 @@
     display: flex;
   }
 
+  /* Hero */
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
     text-align: center;
   }
 
   .hero-content {
-    max-width: 100%;
+    max-width: 600px;
     margin: 0 auto;
+  }
+
+  .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-trust-bar {
@@ -46,13 +73,20 @@
   }
 
   .hero-visual {
-    max-width: 580px;
+    max-width: 520px;
     margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Grids */
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
 
   .trust-split-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
   .trust-visual-center {
@@ -61,77 +95,7 @@
 
   .ecosystem-grid {
     grid-template-columns: 1fr;
-  }
-
-  .steps-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 36px;
-  }
-
-  .footer-top-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
-  }
-}
-
-/* Tablets (<= 768px) */
-@media (max-width: 768px) {
-  :root {
-    --header-height: 70px;
-  }
-
-  .section {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
-  .hero-title {
-    font-size: 2.4rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .hero-trust-bar {
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-  }
-
-  .metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .metric-item {
-    border-right: none;
-    border-bottom: 1px solid var(--border-light);
-    padding-bottom: 16px;
-  }
-
-  .metric-item:nth-child(3),
-  .metric-item:nth-child(4) {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .calc-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .calculator-box {
-    padding: 28px 20px;
-  }
-
-  .app-banner-card {
-    grid-template-columns: 1fr;
-    padding: 36px 24px;
-    text-align: center;
-  }
-
-  .app-store-btns {
-    justify-content: center;
+    gap: 28px;
   }
 
   .about-split {
@@ -140,14 +104,478 @@
   }
 
   .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  /* Partner Banner */
+  .partner-banner-overlay {
+    padding: 36px 40px;
+  }
+  .partner-banner-title {
+    font-size: 1.9rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Tablets and Large Smartphones (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 66px;
+  }
+
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 1.95rem;
+    line-height: 1.25;
+  }
+
+  .section-desc {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  /* Header */
+  .brand-logo img {
+    height: 34px;
+  }
+  .brand-logo span {
+    font-size: 1.2rem;
+  }
+
+  .header-download-btn span {
+    display: inline;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: calc(var(--header-height) + 24px);
+    padding-bottom: 44px;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+    line-height: 1.18;
+  }
+
+  .hero-subtitle {
+    font-size: 1.02rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-search-wrapper {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .hero-search-input {
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .search-submit-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.98rem;
+  }
+
+  .quick-tags {
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+
+  .hero-trust-bar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .trust-item {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .hero-main-img-card img {
+    height: 290px;
+  }
+
+  .floating-badge {
+    position: static;
+    margin-top: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    animation: none;
+    padding: 12px 16px;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .floating-badge.badge-top,
+  .floating-badge.badge-bottom {
+    position: static;
+  }
+
+  /* App Download Section */
+  #appDownloadSection {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .download-highlight-card {
+    grid-template-columns: 1fr;
+    padding: 28px 20px;
+    text-align: center;
+    margin: 16px auto;
+    gap: 24px;
+  }
+
+  .download-card-visual img {
+    max-width: 220px;
+  }
+
+  .download-card-info h3 {
+    font-size: 1.55rem;
+    line-height: 1.25;
+  }
+
+  .download-card-info p {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+
+  .download-pill-badges {
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .download-pill-item {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
+
+  .download-buttons-group {
+    justify-content: center;
+  }
+
+  #directApkDownloadBtn {
+    width: 100%;
+    padding: 14px 20px !important;
+    font-size: 1rem !important;
+    justify-content: center;
+  }
+
+  /* Metrics 2x2 */
+  .metrics-strip {
+    padding: 28px 0;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .metric-item {
+    padding: 12px 8px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .metric-item:nth-child(3),
+  .metric-item:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .metric-num {
+    font-size: 2rem;
+  }
+
+  .metric-label {
+    font-size: 0.85rem;
+  }
+
+  /* Services Showcase: Smooth horizontal swipeable filter tabs */
+  .services-filter-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 6px 14px;
+    gap: 8px;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .services-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.86rem;
+    white-space: nowrap;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .service-card-img {
+    height: 180px;
+  }
+
+  .service-card-body {
+    padding: 16px;
+  }
+
+  .service-card-title {
+    font-size: 1.15rem;
+  }
+
+  /* Steps / How It Works */
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .step-card {
+    padding: 30px 20px 22px;
+  }
+
+  /* Trust & Safety */
+  .trust-visual-center img {
+    max-width: 260px;
+  }
+
+  .trust-feature-item {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .trust-feat-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+
+  .trust-feat-content h4 {
+    font-size: 1.05rem;
+  }
+
+  .trust-feat-content p {
+    font-size: 0.86rem;
+  }
+
+  /* Dual Ecosystem */
+  .ecosystem-card {
+    padding: 24px 18px;
+  }
+
+  .eco-title {
+    font-size: 1.5rem;
+  }
+
+  .eco-desc {
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+  }
+
+  .eco-img-preview {
+    height: 180px;
+    margin-bottom: 18px;
+  }
+
+  .eco-point {
+    font-size: 0.88rem;
+  }
+
+  .ecosystem-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Partner Banner - Perfect Mobile Stacking (no cut-off text!) */
+  .partner-banner-card {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    background: #064E3B;
+  }
+
+  .partner-banner-bg {
+    max-height: 200px;
+    width: 100%;
+    order: -1;
+  }
+
+  .partner-banner-overlay {
+    position: relative;
+    inset: auto;
+    background: linear-gradient(180deg, #064E3B 0%, #065F46 100%);
+    padding: 28px 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .partner-banner-content {
+    max-width: 100%;
+  }
+
+  .partner-banner-title {
+    font-size: 1.45rem;
+    line-height: 1.25;
+    margin: 10px 0 12px;
+  }
+
+  .partner-banner-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .partner-banner-content .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Reviews */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .review-card {
+    padding: 20px 16px;
+  }
+
+  .review-text {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  /* About Mission */
+  .about-text h3 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+
+  .value-pill {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .value-pill-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .value-pill-text h5 {
+    font-size: 0.86rem;
+  }
+
+  .value-pill-text p {
+    font-size: 0.74rem;
+  }
+
+  .about-actions-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .about-actions-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* FAQ */
+  .faq-question {
+    padding: 16px 18px;
+    font-size: 1rem;
+  }
+
+  .faq-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    padding: 0 18px;
+  }
+
+  .faq-item.active .faq-answer {
+    padding-bottom: 16px;
+  }
+
+  .faq-answer p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .footer-top-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+    margin-bottom: 18px;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 12px;
+    gap: 14px;
+    padding-top: 20px;
   }
 
   .footer-bottom div a {
@@ -155,72 +583,159 @@
     margin: 4px 8px;
   }
 
-  .floating-badge {
-    position: static;
-    margin-top: 16px;
-    animation: none;
+  /* Modals */
+  .modal-dialog {
+    width: 95%;
+    max-width: 520px;
+    max-height: 92vh;
+    border-radius: var(--radius-lg);
   }
 
-  .floating-badge.badge-top,
-  .floating-badge.badge-bottom {
-    position: static;
-  }
-}
-
-/* Mobile Phones (<= 480px) */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
+  .modal-header {
+    padding: 16px 18px;
   }
 
-  .hero-search-wrapper {
-    flex-direction: column;
-    padding: 12px;
+  .modal-title {
+    font-size: 1.18rem;
+  }
+
+  .modal-body {
+    padding: 18px;
+  }
+
+  .modal-footer {
+    padding: 14px 18px;
+    flex-direction: column-reverse;
     gap: 10px;
   }
 
-  .search-submit-btn {
+  .modal-footer .btn {
     width: 100%;
     justify-content: center;
   }
 
-  .steps-grid {
+  .download-modal-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .metrics-grid {
-    grid-template-columns: 1fr;
+  .download-modal-img {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Standard Smartphones (<= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
-  .metric-item {
-    border-bottom: 1px solid var(--border-light);
+  /* Header compacting to prevent any wrapping */
+  .nav-container {
+    gap: 8px;
   }
 
-  .metric-item:last-child {
-    border-bottom: none;
+  .brand-logo img {
+    height: 32px;
   }
 
+  .brand-logo span {
+    font-size: 1.15rem;
+  }
+
+  .header-download-btn {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    gap: 5px;
+  }
+
+  .header-download-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Hero */
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+    line-height: 1.16;
+  }
+
+  .hero-subtitle {
+    font-size: 0.94rem;
+  }
+
+  .hero-main-img-card img {
+    height: 240px;
+  }
+
+  /* Services 1-column */
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
-  .reviews-grid {
+  /* Metrics 2x2 compact */
+  .metric-num {
+    font-size: 1.75rem;
+  }
+
+  .metric-label {
+    font-size: 0.78rem;
+  }
+
+  /* About values 1-column */
+  .about-values-grid {
     grid-template-columns: 1fr;
   }
 
-  .modal-dialog {
-    max-height: 94vh;
+  /* Legal content in modal */
+  .legal-content h3 {
+    font-size: 1.05rem;
+  }
+  .legal-content p,
+  .legal-content li {
+    font-size: 0.88rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small/Compact Smartphones (<= 360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
-  .modal-header {
-    padding: 18px 20px;
+  .hero-title {
+    font-size: 1.65rem;
   }
 
-  .modal-body {
-    padding: 20px;
+  .hero-subtitle {
+    font-size: 0.88rem;
   }
 
-  .modal-footer {
-    padding: 14px 20px;
+  .header-download-btn span {
+    display: none; /* Icon only on extra narrow devices */
+  }
+
+  .btn {
+    padding: 11px 18px;
+    font-size: 0.88rem;
+  }
+
+  .metric-num {
+    font-size: 1.55rem;
   }
 }

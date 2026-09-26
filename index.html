@@ -157,7 +157,7 @@
         <button class="btn btn-secondary btn-sm" data-open-modal="downloadModal" id="quickBookHeaderBtn">
           Book a Service
         </button>
-        <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary btn-sm" id="downloadAppHeaderBtn">
+        <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary btn-sm header-download-btn" id="downloadAppHeaderBtn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           <span>Download APK</span>
         </a>
@@ -173,9 +173,12 @@
   <!-- Mobile Drawer & Overlay -->
   <div class="mobile-overlay" id="mobileOverlay"></div>
   <aside class="mobile-nav" id="mobileNav">
-    <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
-      <img src="assets/images/logo.png" alt="SANGI" style="height:38px;">
-      <strong style="font-size:1.3rem; font-family:var(--font-heading);">SANGI</strong>
+    <div class="mobile-nav-header">
+      <div class="mobile-nav-brand">
+        <img src="assets/images/logo.png" alt="SANGI Logo" style="height:36px;">
+        <strong>SANGI</strong>
+      </div>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Navigation Menu">&times;</button>
     </div>
     <a href="#services" class="nav-link">Explore Services</a>
     <a href="#howItWorks" class="nav-link">How It Works</a>
@@ -934,23 +937,16 @@
         </div>
 
         <!-- Full Width Partner Banner with AI Photo -->
-        <div id="partnerBanner"
-          style="margin-top: 48px; border-radius: var(--radius-2xl); overflow: hidden; position: relative; box-shadow: var(--shadow-xl); border: 2px solid var(--border-green);">
-          <img src="assets/images/join_pro_banner.jpg" alt="Join SANGI Professional Technicians Team"
-            style="width:100%; max-height: 440px; object-fit: cover;">
-          <div
-            style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6, 78, 59, 0.92) 0%, rgba(22, 163, 74, 0.6) 60%, transparent 100%); display: flex; align-items: center; padding: 40px 60px;">
-            <div style="max-width: 520px; color: white;">
-              <span
-                style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Staff
-                Onboarding</span>
-              <h3
-                style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; margin: 12px 0; line-height: 1.2;">
-                Ready to Work with Dignity & High Earnings?</h3>
-              <p style="font-size: 1rem; opacity: 0.95; margin-bottom: 24px; line-height: 1.5;">
+        <div id="partnerBanner" class="partner-banner-card">
+          <img src="assets/images/join_pro_banner.jpg" alt="Join SANGI Professional Technicians Team" class="partner-banner-bg" loading="lazy">
+          <div class="partner-banner-overlay">
+            <div class="partner-banner-content">
+              <span class="partner-banner-badge">Staff Onboarding</span>
+              <h3 class="partner-banner-title">Ready to Work with Dignity & High Earnings?</h3>
+              <p class="partner-banner-desc">
                 Download the SANGI App APK, select 'Register as Staff', complete simple 3-step KYC verification, and start accepting job requests in your neighborhood.
               </p>
-              <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-white">
+              <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-white partner-banner-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 <span>Download SANGI APK</span>
               </a>
@@ -1087,7 +1083,7 @@
               </div>
             </div>
 
-            <div style="display:flex; gap:16px;">
+            <div class="about-actions-row">
               <a href="about.html" class="btn btn-primary">Read Full Company Story</a>
               <button class="btn btn-outline" data-open-modal="termsModal">View Terms & Conditions</button>
             </div>
@@ -1399,6 +1395,18 @@
         <button type="button" class="btn btn-primary btn-sm" data-close-modal>I Understand & Accept</button>
       </div>
     </div>
+  <!-- ========================================================================
+       MOBILE BOTTOM STICKY ACTION BAR
+       ======================================================================== -->
+  <div class="mobile-sticky-bar" id="mobileStickyBar">
+    <div class="mobile-sticky-info">
+      <strong>SANGI App</strong>
+      <span>17+ Doorstep Services • ₹30 Booking</span>
+    </div>
+    <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary btn-sm mobile-sticky-btn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      <span>Download APK</span>
+    </a>
   </div>
 
   <!-- JavaScript Modules -->

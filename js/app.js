@@ -26,20 +26,26 @@ function initNavbar() {
 
   // Mobile Drawer Toggle
   if (mobileToggle && mobileNav && mobileOverlay) {
-    function toggleMobileMenu() {
-      mobileToggle.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-      mobileOverlay.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    const mobileClose = document.getElementById('mobileNavClose');
+
+    function toggleMobileMenu(forceClose) {
+      const isOpen = forceClose ? false : !mobileNav.classList.contains('open');
+      mobileToggle.classList.toggle('open', isOpen);
+      mobileNav.classList.toggle('open', isOpen);
+      mobileOverlay.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     }
 
-    mobileToggle.addEventListener('click', toggleMobileMenu);
-    mobileOverlay.addEventListener('click', toggleMobileMenu);
+    mobileToggle.addEventListener('click', () => toggleMobileMenu());
+    mobileOverlay.addEventListener('click', () => toggleMobileMenu(true));
+    if (mobileClose) {
+      mobileClose.addEventListener('click', () => toggleMobileMenu(true));
+    }
 
-    // Close on mobile link click
-    mobileNav.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        if (mobileNav.classList.contains('open')) toggleMobileMenu();
+    // Close on mobile link click or action button click
+    mobileNav.querySelectorAll('.nav-link, .btn').forEach(elem => {
+      elem.addEventListener('click', () => {
+        if (mobileNav.classList.contains('open')) toggleMobileMenu(true);
       });
     });
   }

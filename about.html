@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -156,6 +156,40 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+    @media (max-width: 768px) {
+      .about-page-header {
+        padding: 96px 0 36px;
+      }
+      .story-section {
+        padding: 40px 0;
+      }
+      .story-content h2 {
+        font-size: 1.85rem;
+      }
+      .stats-banner {
+        padding: 36px 18px;
+        margin: 40px auto;
+      }
+      .stats-banner h3 {
+        font-size: 1.65rem !important;
+      }
+      .stats-banner-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .stat-box h4 {
+        font-size: 2rem;
+      }
+      .value-card-item {
+        padding: 22px 18px;
+      }
+    }
+    @media (max-width: 480px) {
+      .stats-banner-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -175,10 +209,41 @@
         <a href="terms.html" class="nav-link">Terms & Conditions</a>
       </nav>
       <div class="nav-actions">
-        <a href="index.html#services" class="btn btn-primary btn-sm">Explore Services</a>
+        <a href="index.html#services" class="btn btn-primary btn-sm header-download-btn">Explore Services</a>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <div class="mobile-nav-brand">
+        <img src="assets/images/logo.png" alt="SANGI Logo" style="height:36px;">
+        <strong>SANGI</strong>
+      </div>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <a href="index.html#services" class="nav-link">Explore Services</a>
+    <a href="index.html#howItWorks" class="nav-link">How It Works</a>
+    <a href="index.html#whyUs" class="nav-link">Why Choose Us</a>
+    <a href="about.html" class="nav-link">About SANGI</a>
+    <a href="terms.html" class="nav-link">Terms & Conditions</a>
+    <a href="index.html#faq" class="nav-link">FAQs</a>
+    <div style="margin-top:auto; display:flex; flex-direction:column; gap:12px;">
+      <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary btn-full">
+        Download SANGI APK
+      </a>
+      <a href="index.html" class="btn btn-secondary btn-full">
+        Back to Home
+      </a>
+    </div>
+  </aside>
 
   <main>
     <!-- Header Banner -->
@@ -297,7 +362,19 @@
         </div>
       </div>
     </div>
-  </footer>
+  <!-- Mobile Bottom Sticky Action Bar -->
+  <div class="mobile-sticky-bar" id="mobileStickyBar">
+    <div class="mobile-sticky-info">
+      <strong>SANGI App</strong>
+      <span>17+ Doorstep Services • ₹30 Booking</span>
+    </div>
+    <a href="downloads/sangi.apk" download="sangi.apk" class="btn btn-primary btn-sm mobile-sticky-btn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      <span>Download APK</span>
+    </a>
+  </div>
 
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
 </body>
 </html>

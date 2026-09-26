@@ -483,3 +483,66 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Mobile Bottom Sticky Action Bar */
+.mobile-sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(22, 163, 74, 0.2);
+  padding: 10px 16px;
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
+  z-index: 990;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-bar {
+    display: flex;
+  }
+  body {
+    padding-bottom: 68px;
+  }
+}
+
+.mobile-sticky-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-sticky-info strong {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  line-height: 1.2;
+}
+
+.mobile-sticky-info span {
+  font-size: 0.75rem;
+  color: var(--secondary-text);
+}
+
+.mobile-sticky-btn {
+  padding: 9px 18px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  gap: 6px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+  flex-shrink: 0;
+}
+
+.about-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
