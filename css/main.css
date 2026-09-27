@@ -1537,6 +1537,189 @@ ul, ol {
 }
 
 /* ==========================================================================
+   RAIPUR LOCAL SEO & COVERAGE SECTION
+   ========================================================================== */
+.raipur-coverage-section {
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.raipur-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.raipur-highlight-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%);
+  border: 1.5px solid var(--border-green);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.raipur-highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-green);
+}
+
+.raipur-highlight-card .card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--very-light-green);
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-green);
+}
+
+.raipur-highlight-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+}
+
+.raipur-highlight-card p {
+  font-size: 0.92rem;
+  color: var(--secondary-text);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.raipur-highlight-card .card-meta {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark-green);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Localities Box */
+.raipur-areas-box {
+  background: var(--very-light-green);
+  border: 2px solid var(--border-green);
+  border-radius: var(--radius-2xl);
+  padding: 36px 40px;
+  margin-bottom: 40px;
+}
+
+.raipur-areas-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 24px;
+}
+
+.raipur-areas-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--dark-green);
+  margin-bottom: 8px;
+}
+
+.raipur-areas-header p {
+  font-size: 0.95rem;
+  color: var(--secondary-text);
+}
+
+.raipur-areas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.raipur-area-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--white);
+  border: 1px solid var(--border-green);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+
+.raipur-area-pill:hover {
+  background: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+  transform: translateY(-2px);
+}
+
+.raipur-area-pill span.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-green);
+}
+
+.raipur-area-pill:hover span.dot {
+  background: var(--white);
+}
+
+/* Popular Search Queries Strip */
+.raipur-searches-box {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 28px;
+  text-align: center;
+}
+
+.raipur-searches-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary-text);
+  margin-bottom: 14px;
+}
+
+.raipur-searches-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.raipur-search-tag {
+  background: var(--bg-page);
+  border: 1px solid var(--border-color);
+  color: var(--secondary-text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.raipur-search-tag:hover {
+  background: var(--white);
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
    FOOTER
    ========================================================================== */
 .site-footer {

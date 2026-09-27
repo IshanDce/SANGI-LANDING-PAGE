@@ -115,6 +115,12 @@ html, body {
   .partner-banner-title {
     font-size: 1.9rem;
   }
+
+  /* Raipur Coverage Grid */
+  .raipur-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -463,6 +469,23 @@ html, body {
   .partner-banner-content .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  /* Raipur Local Coverage */
+  .raipur-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .raipur-areas-box {
+    padding: 24px 18px;
+    border-radius: var(--radius-xl);
+  }
+  .raipur-areas-header h3 {
+    font-size: 1.35rem;
+  }
+  .raipur-area-pill {
+    padding: 6px 12px;
+    font-size: 0.82rem;
   }
 
   /* Reviews */
